@@ -1,8 +1,8 @@
 <script setup name="HelloWorld">
-import { ref } from "vue";
+import { ref } from 'vue';
 
 defineProps({
-  msg: String,
+  msg: String
 });
 
 const count = ref(0);

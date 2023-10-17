@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --port 9527",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "prettier": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\""
   },
   "dependencies": {
     "pinia": "^2.1.7",
@@ -15,6 +17,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.51.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "nprogress": "^0.2.0",
+    "prettier": "^3.0.3",
     "sass": "^1.69.3",
     "scss": "^0.2.4",
     "vite": "^4.4.5",

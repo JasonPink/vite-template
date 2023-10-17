@@ -1,0 +1,10 @@
+@import url("./base.scss");
+
+#nprogress {
+  .bar {
+    background: $primary-color !important;
+    .peg {
+      box-shadow: 0 0 0.26667rem $primary-color, 0 0 0.13333rem $primary-color;
+    }
+  }
+}
