@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
 import VueSetupExtend from 'vite-plugin-vue-setup-extend';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
 export default defineConfig({
   resolve: {
@@ -9,7 +10,14 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
-  plugins: [vue(), VueSetupExtend()],
+  plugins: [
+    vue(),
+    createSvgIconsPlugin({
+      iconDirs: [resolve(process.cwd(), 'src/assets/svg')],
+      symbolId: 'icon-[dir]-[name]'
+    }),
+    VueSetupExtend()
+  ],
   css: {
     preprocessorOptions: {
       scss: {
