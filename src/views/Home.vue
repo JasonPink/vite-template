@@ -8,7 +8,7 @@
 import { onMounted } from 'vue';
 import { getInfo } from '@/api/user.js';
 
-const a = 1;
+const a = 2;
 console.log(a);
 onMounted(async () => {
   const res = await getInfo();
