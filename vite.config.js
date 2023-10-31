@@ -10,6 +10,14 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://qqlykm.cn',
+        changeOrigin: true
+      }
+    }
+  },
   plugins: [
     vue(),
     createSvgIconsPlugin({

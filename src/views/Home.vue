@@ -4,7 +4,15 @@
     <svg-icon name="user" />
   </div>
 </template>
-<script setup name="BaseHome"></script>
+<script setup name="BaseHome">
+import { onMounted } from 'vue';
+import { getInfo } from '@/api/user.js';
+
+onMounted(async () => {
+  const res = await getInfo();
+  console.log('res', res);
+});
+</script>
 <style scoped lang="scss">
 .wrap {
   width: 32px;
